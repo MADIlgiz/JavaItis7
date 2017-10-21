@@ -19,6 +19,9 @@ number = number/10;
 }
 
 System.out.println(""+sum);
+if (sum ==1||sum ==2||sum==3){
+x = true;
+}
 if (sum>3)
 {
 int i = 2;

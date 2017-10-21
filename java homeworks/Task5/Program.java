@@ -1,12 +1,11 @@
 import java.util.Scanner;
 public class Program { 
-public static double simp(double a, double b, int N) {
+public static double integrate(double a, double b, int N) {
 double result = 0;
 double DeltaX = Math.abs(b-a)/N;
-int i = 0;
 for (double x = a+DeltaX; x<b; x = x + 2*DeltaX) {
-result = result + (Math.abs(b-a))/(3*N)*(Math.cos(x) + 4*Math.cos(x+DeltaX) + Math.cos(x+2*DeltaX));
-i++;
+result = result + (Math.abs(b-a))/(3*N)*(Math.sin(2*x) + 4*Math.sin(2*(x+DeltaX)) + Math.sin(2*(x+2*DeltaX)));
+
 }
 return result;
 }
@@ -17,7 +16,7 @@ double a, b;
 a = scanner.nextDouble();
 b = scanner.nextDouble();
 int N = scanner.nextInt();
-double result = simp(a,b,N);
+double result = integrate(a,b,N);
 System.out.println(result);
 }
 
