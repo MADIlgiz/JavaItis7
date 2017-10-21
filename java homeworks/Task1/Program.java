@@ -5,22 +5,22 @@ Scanner scanner = new Scanner(System.in);
 int number = scanner.nextInt();
 int a = 0;
 int b=0;
-int digitsumMin = 1000;
-int digitsum = 0;
+int Min = 1000;
+int sum = 0;
 a = number;
 while (number != -1) {
 while (number != 0) {
-digitsum = digitsum + number % 10;
+sum = sum + number % 10;
 number = number / 10;
 }
-System.out.println("сумма цифр числа " + digitsum);
-if (digitsum <= digitsumMin) {
-digitsumMin = digitsum;
+System.out.println("сумма цифр числа " + sum);
+if (sum <= Min) {
+Min = sum;
 }
-if (digitsum == digitsumMin)
+if (sum == Min)
 { b=a;
 } 
-digitsum = 0;
+sum = 0;
 number = scanner.nextInt();
 a = number;
 }
